@@ -1,0 +1,17 @@
+<!-- List group -->
+<div class="row">
+  <div class="col-3">
+    <div class="list-group" id="myList" role="tablist">
+      <a  *ngFor="let question of questions" class="list-group-item list-group-item-action" data-toggle="list" href="#q{{question.id}}" role="tab">
+        {{question.title}}
+      </a>
+    </div>
+  </div>
+  <!-- Tab panes -->
+  <div class="col-9">
+    <div class="tab-content">
+      <div  *ngFor="let question of questions" class="tab-pane" id="q{{question.id}}" role="tabpanel">
+{{question.link}}      </div>
+    </div>
+  </div>
+</div>
